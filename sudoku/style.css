@@ -1,0 +1,90 @@
+.hidden{
+   display:none;
+
+}
+body.light{
+   background-color:#fff;
+   color:black;
+
+}
+header{
+  color:black;
+  text-align: center;
+  padding: 10px;
+  border-bottom: rgb(226, 23, 223) dashed 2px;
+}
+h1{
+   color: red;
+   font-size: 30pt;
+}
+#setup{
+   display: flex;
+   justify-content: center;
+   
+
+}
+button{
+   justify-self: center;
+}
+p#timer,p#lives{
+   font-size: 25;
+   font-weight: bold;
+   text-align:center ;
+}
+#game{
+   display: flex;
+   justify-content: center;
+
+}
+#container > p {
+   border:1px solid black;
+   border-radius: 20px;
+   width:60px;
+   height:60px;
+   font-size:40pt;
+   margin-left: 50px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   text-align:center;
+}
+#board{
+   padding-top: 10px;
+margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: flex-start;
+width:600px;
+height:600px;
+}
+.tile{
+   border:1px solid rgb(25, 67, 218);
+   width:60px;
+   height: 60px;
+   text-align: center;
+   margin: 0px;
+   vertical-align: middle;
+   font-size: 30pt;
+
+
+}
+.bottomBorder{
+   border-bottom: 4px solid black;
+}
+.rightBorder{
+   border-right: 4px solid black;
+}
+
+
+
+p.selected{
+   background-color: rgb(237, 180, 223);
+
+}
+p.incorrect{
+   color:red;
+}
+footer{
+   background-color: rgb(52, 221, 83);
+   text-align: center;
+}

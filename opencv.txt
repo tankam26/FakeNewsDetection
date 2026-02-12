@@ -1,0 +1,9 @@
+every image can be represented as pixels
+black-white(0-1)
+range 0-255(grayscale) total-256
+colored image
+RGB channels(0-255)*3
+full hd-1920x1080
+hd-1320*720
+4k-3800*2100
+image resolution

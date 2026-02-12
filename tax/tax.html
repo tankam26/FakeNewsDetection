@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculate Tax</title>
+  <link rel="stylesheet" href="tax.css" />
+  <script defer src="tax.js"></script>
+</head>
+<body>
+  <h1>Calculate Tax</h1>
+  <h3>Calculate Your Indian Income Tax Easily</h3>
+
+  <div class="formfill">
+    <form id="taxForm">
+      
+      <!-- Financial Year -->
+      <div>
+        Financial Year:
+        <select name="fy" id="fy">
+          <option value="2024-2025">2024-2025</option>
+          <option value="2025-2026">2025-2026</option>
+        </select>
+      </div>
+
+      <!-- Age Group -->
+      <div>
+        Age Group:
+        <label for="below60">
+          <input type="radio" class="age" name="age" id="below60" value="below60" />
+          Below 60
+        </label>
+        <label for="seniorcitizen">
+          <input type="radio" class="age" name="age" id="seniorcitizen" value="60-80" />
+          60-80 (Senior Citizen)
+        </label>
+        <label for="above80">
+          <input type="radio" class="age" name="age" id="above80" value="80above" />
+          80+ (Super Senior Citizen)
+        </label>
+      </div>
+
+      <!-- Annual Income -->
+      <div>
+        <label for="income">Annual Income:</label>
+        ₹<input type="number" class="annualincome" id="income" name="income" step="1000" min="0" required />
+      </div>
+
+      <!-- Regime Choice -->
+      <div>
+        Regime Choice:
+        <label for="old">
+          <input type="radio" class="regime" name="regime" id="old" value="old" />
+          Old
+        </label>
+        <label for="new">
+          <input type="radio" class="regime" name="regime" id="new" value="new" />
+          New
+        </label>
+      </div>
+
+      <!-- Deduction Section (Visible for Old Regime) -->
+      <div id="deductions" style="display: none;">
+        <label for="deduction80C">80C Deduction:</label>
+        ₹<input type="number" id="deduction80C" name="deduction80C" min="0" step="500" />
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button id="taxcalc" type="submit">Calculate Tax</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tax Display Section -->
+  <div class="taxpay"></div>
+
+  <!-- Footer -->
+  <footer>
+    For estimation only. Refer to
+    <a href="https://www.incometax.gov.in" target="_blank">incometax.gov.in</a> for official filing.
+  </footer>
+</body>
+</html>

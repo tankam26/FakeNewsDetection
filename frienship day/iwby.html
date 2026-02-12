@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+        }
+        .sprinkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: white;
+      border-radius: 50%;
+      top: -10px;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10px;
+        opacity: 1;
+      }
+      100% {
+        top: 100vh;
+        opacity: 0;
+      }
+    }
+        
+
+    </style>
+</head>
+<body>
+    <h1>I Wanna Be Yours</h1>
+    <div>
+        <p style="line-height: 40px;">
+            I wanna be your morning text  <br>
+The one that makes you smile before the day begins.  <br>
+I wanna be your playlist on repeat  <br>
+The melody that never fades.<br>
+
+I wanna be your umbrella in the storm,  <br>
+Your hoodie when it’s cold,  <br>
+Your quiet in the chaos,  <br>
+Your warmth when the world feels cold.<br>
+
+I wanna be the reason you look forward to tomorrow,  <br>
+The one who walks beside you, not ahead, not behind.  <br>
+I wanna be yours —  <br>
+Not just for a moment, but for every moment after.<br><br>
+
+So…  <br><br>
+Would you let me be yours?<br>
+        </p>
+         </div>
+         <script>
+    // Create 100 falling white sprinkles
+    for (let i = 0; i < 100; i++) {
+      const sprinkle = document.createElement('div');
+      sprinkle.className = 'sprinkle';
+      sprinkle.style.left = `${Math.random() * 100}vw`;
+      sprinkle.style.animationDuration = `${2 + Math.random() * 3}s`;
+      sprinkle.style.animationDelay = `${Math.random() * 5}s`;
+      document.body.appendChild(sprinkle);
+    }
+  </script>
+    
+</body>
+</html>
